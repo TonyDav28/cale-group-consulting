@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tonydav28.github.io/cale-group-consulting/sitemap.xml
