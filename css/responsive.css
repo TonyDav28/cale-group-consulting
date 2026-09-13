@@ -82,3 +82,116 @@
     font-size: 30px;
   }
 }
+/* =====================================================
+   RESPONSIVE - GERENCIA GENERAL
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .leadership-section {
+    padding: 70px 0;
+  }
+
+  .leadership-wrapper {
+    border-radius: 22px;
+  }
+
+  /*
+  En tablet mostramos igualmente
+  la imagen completa.
+  */
+  .leadership-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .leadership-content {
+    padding: 45px 40px;
+  }
+
+  .leadership-name {
+    font-size: 38px;
+  }
+
+  .leadership-role {
+    font-size: 21px;
+  }
+
+  .leadership-text {
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .leadership-section {
+    padding: 60px 0;
+  }
+
+  .leadership-intro {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .leadership-wrapper {
+    border-radius: 18px;
+  }
+
+  /*
+  En celular tampoco se recorta.
+  Mantiene 1254x1254 proporcional.
+  */
+  .leadership-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .leadership-content {
+    padding: 35px 25px;
+  }
+
+  .leadership-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .leadership-label::before {
+    width: 35px;
+  }
+
+  .leadership-name {
+    font-size: 31px;
+  }
+
+  .leadership-role {
+    font-size: 19px;
+    margin-bottom: 24px;
+  }
+
+  .leadership-text {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .leadership-quote {
+    font-size: 15px;
+    padding: 18px 20px;
+  }
+
+  .leadership-signature img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .leadership-signature strong {
+    font-size: 15px;
+  }
+
+  .leadership-signature span {
+    font-size: 13px;
+  }
+
+}

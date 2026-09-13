@@ -455,3 +455,206 @@ img {
     box-shadow:
     0 20px 45px rgba(0,0,0,.15);
 }
+/* =====================================================
+   GERENCIA GENERAL
+===================================================== */
+
+.leadership-section {
+  padding: 100px 0;
+  background:
+    linear-gradient(
+      135deg,
+      #f5f6f8 0%,
+      #ffffff 55%,
+      rgba(207, 179, 54, 0.08) 100%
+    );
+}
+
+.leadership-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--gris-texto);
+  font-size: 18px;
+}
+
+/* TARJETA PRINCIPAL */
+.leadership-wrapper {
+  max-width: 1450px;
+  margin: 0 auto;
+  background: var(--blanco);
+  border-radius: 28px;
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 60px rgba(32, 38, 63, 0.13);
+
+  border: 1px solid rgba(52, 60, 97, 0.07);
+}
+
+/* ==========================
+   IMAGEN
+========================== */
+
+.leadership-image {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f3ef;
+
+  overflow: hidden;
+}
+
+/*
+IMPORTANTE:
+NO usamos cover.
+La imagen de Yerlly contiene fotografía,
+logotipo y texto corporativo, por lo que
+debemos verla completamente.
+*/
+.leadership-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  transition: transform 0.5s ease;
+}
+
+/* Efecto muy sutil */
+.leadership-wrapper:hover .leadership-image img {
+  transform: scale(1.01);
+}
+
+/* ==========================
+   CONTENIDO
+========================== */
+
+.leadership-content {
+  padding: 60px 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* GERENCIA GENERAL */
+.leadership-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: var(--oro);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.leadership-label::before {
+  content: "";
+
+  width: 52px;
+  height: 3px;
+
+  background: var(--oro);
+
+  border-radius: 10px;
+}
+
+/* NOMBRE */
+.leadership-name {
+  color: var(--azul);
+
+  font-size: 48px;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  margin-bottom: 8px;
+}
+
+/* CARGO */
+.leadership-role {
+  color: var(--oro);
+
+  font-size: 23px;
+  font-weight: 700;
+
+  margin-bottom: 32px;
+}
+
+/* TEXTO */
+.leadership-text {
+  color: var(--gris-texto);
+
+  font-size: 17px;
+  line-height: 1.9;
+
+  margin-bottom: 22px;
+}
+
+/* FRASE DESTACADA */
+.leadership-quote {
+  margin-top: 5px;
+
+  padding: 22px 26px;
+
+  background: rgba(207, 179, 54, 0.08);
+
+  border-left: 4px solid var(--oro);
+
+  border-radius: 0 18px 18px 0;
+
+  color: var(--azul);
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* FIRMA INSTITUCIONAL */
+.leadership-signature {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 30px;
+}
+
+.leadership-signature img {
+  width: 62px;
+  height: 62px;
+
+  object-fit: contain;
+}
+
+.leadership-signature strong {
+  display: block;
+
+  color: var(--azul);
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.leadership-signature span {
+  display: block;
+
+  color: var(--gris-texto);
+
+  font-size: 14px;
+
+  margin-top: 2px;
+}
