@@ -455,129 +455,223 @@ img {
     box-shadow:
     0 20px 45px rgba(0,0,0,.15);
 }
+
 /* =====================================================
-   GERENCIA GENERAL
+   GERENCIA GENERAL - DISEÑO EJECUTIVO
 ===================================================== */
 
 .leadership-section {
   padding: 100px 0;
+
   background:
     linear-gradient(
       135deg,
-      #f5f6f8 0%,
-      #ffffff 55%,
+      rgba(245, 246, 248, 1) 0%,
+      rgba(255, 255, 255, 1) 55%,
       rgba(207, 179, 54, 0.08) 100%
     );
+
+  position: relative;
+  overflow: hidden;
 }
 
+/* Elemento decorativo del fondo */
+.leadership-section::before {
+  content: "";
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background: rgba(52, 60, 97, 0.05);
+
+  top: -130px;
+  right: -100px;
+}
+
+/* INTRODUCCIÓN */
 .leadership-intro {
   max-width: 760px;
   margin: 0 auto;
+
   color: var(--gris-texto);
+
   font-size: 18px;
+  line-height: 1.8;
+
+  text-align: center;
 }
 
-/* TARJETA PRINCIPAL */
+/* =====================================================
+   TARJETA PRINCIPAL
+===================================================== */
+
 .leadership-wrapper {
+  position: relative;
+
   max-width: 1450px;
   margin: 0 auto;
-  background: var(--blanco);
-  border-radius: 28px;
+
+  background: #ffffff;
+
+  border-radius: 30px;
+
   overflow: hidden;
 
   box-shadow:
-    0 25px 60px rgba(32, 38, 63, 0.13);
+    0 25px 60px rgba(30, 38, 70, 0.12);
 
-  border: 1px solid rgba(52, 60, 97, 0.07);
+  border:
+    1px solid rgba(52, 60, 97, 0.08);
 }
 
-/* ==========================
+/* =====================================================
    IMAGEN
-========================== */
+===================================================== */
 
 .leadership-image {
   width: 100%;
+  height: 100%;
+
+  position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #f5f3ef;
+  background: #ffffff;
 
   overflow: hidden;
 }
 
 /*
-IMPORTANTE:
-NO usamos cover.
-La imagen de Yerlly contiene fotografía,
-logotipo y texto corporativo, por lo que
-debemos verla completamente.
+  La fotografía se muestra COMPLETA.
+  No utilizamos object-fit: cover.
 */
 .leadership-image img {
-  display: block;
-
   width: 100%;
   height: auto;
 
+  display: block;
+
   object-fit: contain;
+  object-position: center;
 
-  transition: transform 0.5s ease;
+  border-radius: 30px 0 0 30px;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
-/* Efecto muy sutil */
+/*
+  DIFUMINADO HACIA EL BLOQUE DE TEXTO.
+  Produce una transición suave entre
+  la fotografía y el fondo blanco.
+*/
+.leadership-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0) 92%,
+      rgba(255,255,255,0.20) 96%,
+      rgba(255,255,255,0.60) 99%,
+      rgba(255,255,255,1) 100%
+    );
+}
+
+/*
+  Sombra interna muy ligera para evitar
+  que la fotografía parezca una imagen
+  simplemente "pegada".
+*/
+.leadership-image::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 0 45px rgba(255,255,255,0.10);
+}
+
+/* Movimiento muy discreto */
 .leadership-wrapper:hover .leadership-image img {
-  transform: scale(1.01);
+  transform: scale(1.008);
 }
 
-/* ==========================
+/* =====================================================
    CONTENIDO
-========================== */
+===================================================== */
 
 .leadership-content {
-  padding: 60px 60px;
+  padding: 65px 60px 65px 50px;
+
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  position: relative;
+  z-index: 2;
+
+  background: #ffffff;
 }
 
 /* GERENCIA GENERAL */
 .leadership-label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
+
+  gap: 12px;
 
   color: var(--oro);
 
-  font-size: 14px;
   font-weight: 700;
 
-  letter-spacing: 2.5px;
   text-transform: uppercase;
 
-  margin-bottom: 18px;
+  letter-spacing: 2.5px;
+
+  font-size: 14px;
+
+  margin-bottom: 16px;
 }
 
 .leadership-label::before {
   content: "";
 
-  width: 52px;
+  width: 46px;
   height: 3px;
 
   background: var(--oro);
 
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* NOMBRE */
 .leadership-name {
   color: var(--azul);
 
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 700;
 
-  line-height: 1.1;
+  line-height: 1.15;
 
   margin-bottom: 8px;
 }
@@ -586,56 +680,85 @@ debemos verla completamente.
 .leadership-role {
   color: var(--oro);
 
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 700;
 
   margin-bottom: 32px;
 }
 
-/* TEXTO */
+/* =====================================================
+   TEXTO EJECUTIVO
+===================================================== */
+
 .leadership-text {
   color: var(--gris-texto);
 
   font-size: 17px;
+
   line-height: 1.9;
 
-  margin-bottom: 22px;
+  margin-bottom: 24px;
+
+  /* JUSTIFICADO */
+  text-align: justify;
+
+  /* mejora distribución entre palabras */
+  text-justify: inter-word;
+
+  /* permite cortes naturales cuando sea necesario */
+  hyphens: auto;
 }
 
-/* FRASE DESTACADA */
+/* =====================================================
+   FRASE DESTACADA
+===================================================== */
+
 .leadership-quote {
-  margin-top: 5px;
+  margin-top: 4px;
+  margin-bottom: 28px;
 
-  padding: 22px 26px;
+  padding: 21px 26px;
 
-  background: rgba(207, 179, 54, 0.08);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(207,179,54,0.10),
+      rgba(207,179,54,0.04)
+    );
 
   border-left: 4px solid var(--oro);
 
-  border-radius: 0 18px 18px 0;
+  border-radius:
+    0 16px 16px 0;
 
   color: var(--azul);
 
   font-size: 17px;
+
   line-height: 1.7;
 
   font-style: italic;
   font-weight: 700;
+
+  text-align: left;
 }
 
-/* FIRMA INSTITUCIONAL */
+/* =====================================================
+   FIRMA INSTITUCIONAL
+===================================================== */
+
 .leadership-signature {
   display: flex;
   align-items: center;
 
   gap: 16px;
 
-  margin-top: 30px;
+  margin-top: 4px;
 }
 
 .leadership-signature img {
-  width: 62px;
-  height: 62px;
+  width: 58px;
+  height: 58px;
 
   object-fit: contain;
 }
@@ -645,7 +768,8 @@ debemos verla completamente.
 
   color: var(--azul);
 
-  font-size: 17px;
+  font-size: 16px;
+
   font-weight: 700;
 }
 
@@ -657,4 +781,151 @@ debemos verla completamente.
   font-size: 14px;
 
   margin-top: 2px;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .leadership-section {
+    padding: 70px 0;
+  }
+
+  .leadership-wrapper {
+    border-radius: 22px;
+  }
+
+  /*
+    En tablet desaparece el difuminado lateral
+    porque la imagen queda encima del texto.
+  */
+  .leadership-image::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0) 88%,
+        rgba(255,255,255,0.45) 95%,
+        rgba(255,255,255,1) 100%
+      );
+  }
+
+  .leadership-image img {
+    width: 100%;
+    height: auto;
+
+    border-radius:
+      22px 22px 0 0;
+  }
+
+  .leadership-content {
+    padding: 45px 40px;
+  }
+
+  .leadership-name {
+    font-size: 38px;
+  }
+
+  .leadership-role {
+    font-size: 21px;
+  }
+
+  .leadership-text {
+    font-size: 16px;
+  }
+}
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .leadership-section {
+    padding: 60px 0;
+  }
+
+  .leadership-intro {
+    font-size: 16px;
+
+    padding: 0 10px;
+  }
+
+  .leadership-wrapper {
+    border-radius: 18px;
+  }
+
+  .leadership-image img {
+    width: 100%;
+    height: auto;
+
+    border-radius:
+      18px 18px 0 0;
+  }
+
+  .leadership-image::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0) 90%,
+        rgba(255,255,255,0.55) 96%,
+        #ffffff 100%
+      );
+  }
+
+  .leadership-content {
+    padding: 35px 25px;
+  }
+
+  .leadership-label {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+
+  .leadership-label::before {
+    width: 35px;
+  }
+
+  .leadership-name {
+    font-size: 31px;
+  }
+
+  .leadership-role {
+    font-size: 19px;
+
+    margin-bottom: 24px;
+  }
+
+  .leadership-text {
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+    hyphens: auto;
+  }
+
+  .leadership-quote {
+    font-size: 15px;
+
+    padding: 18px 20px;
+  }
+
+  .leadership-signature img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .leadership-signature strong {
+    font-size: 15px;
+  }
+
+  .leadership-signature span {
+    font-size: 13px;
+  }
 }
