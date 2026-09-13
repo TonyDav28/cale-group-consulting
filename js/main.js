@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      const numeroWhatsApp = "51974608530";
+      const numeroWhatsApp = "51928285739";
 
       const texto = `
 Hola, deseo solicitar información sobre los servicios de CALE Group Consulting.
@@ -109,7 +109,7 @@ ${mensaje}
       event.preventDefault();
 
       const servicio = boton.getAttribute("data-servicio");
-      const numeroWhatsApp = "51974608530";
+      const numeroWhatsApp = "51928285739";
 
       const texto = `Hola, deseo información sobre el servicio de "${servicio}" de CALE Group Consulting.`;
 
