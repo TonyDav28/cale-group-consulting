@@ -692,21 +692,16 @@ img {
 
 .leadership-text {
   color: var(--gris-texto);
-
   font-size: 17px;
-
   line-height: 1.9;
-
   margin-bottom: 24px;
 
-  /* JUSTIFICADO */
   text-align: justify;
-
-  /* mejora distribución entre palabras */
   text-justify: inter-word;
 
-  /* permite cortes naturales cuando sea necesario */
-  hyphens: auto;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 /* =====================================================
@@ -714,74 +709,46 @@ img {
 ===================================================== */
 
 .leadership-quote {
-  margin-top: 4px;
-  margin-bottom: 28px;
+  position: relative;
+  margin: 20px auto 0;
+  padding: 28px 38px;
 
-  padding: 21px 26px;
+  width: 100%;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(207,179,54,0.10),
-      rgba(207,179,54,0.04)
-    );
+  background: rgba(207, 179, 54, 0.08);
 
-  border-left: 4px solid var(--oro);
-
-  border-radius:
-    0 16px 16px 0;
+  border-left: none;
+  border-top: 1px solid rgba(207, 179, 54, 0.35);
+  border-bottom: 1px solid rgba(207, 179, 54, 0.35);
+  border-radius: 14px;
 
   color: var(--azul);
-
-  font-size: 17px;
-
+  font-size: 18px;
   line-height: 1.7;
-
   font-style: italic;
   font-weight: 700;
 
-  text-align: left;
+  text-align: center;
+
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
-/* =====================================================
-   FIRMA INSTITUCIONAL
-===================================================== */
+.leadership-quote::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
 
-.leadership-signature {
-  display: flex;
-  align-items: center;
+  width: 70px;
+  height: 4px;
 
-  gap: 16px;
-
-  margin-top: 4px;
+  background: var(--oro);
+  border-radius: 10px;
 }
 
-.leadership-signature img {
-  width: 58px;
-  height: 58px;
-
-  object-fit: contain;
-}
-
-.leadership-signature strong {
-  display: block;
-
-  color: var(--azul);
-
-  font-size: 16px;
-
-  font-weight: 700;
-}
-
-.leadership-signature span {
-  display: block;
-
-  color: var(--gris-texto);
-
-  font-size: 14px;
-
-  margin-top: 2px;
-}
 
 /* =====================================================
    TABLET

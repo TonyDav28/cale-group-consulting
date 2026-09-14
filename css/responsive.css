@@ -1,4 +1,5 @@
 @media (max-width: 991px) {
+
   body {
     padding-top: 78px;
   }
@@ -47,9 +48,59 @@
   .value-item:last-child {
     border-bottom: none;
   }
+
 }
 
+
+/* =====================================================
+   RESPONSIVE - GERENCIA GENERAL
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .leadership-section {
+    padding: 70px 0;
+  }
+
+  .leadership-wrapper {
+    border-radius: 22px;
+  }
+
+  .leadership-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .leadership-content {
+    padding: 45px 40px;
+  }
+
+  .leadership-name {
+    font-size: 38px;
+  }
+
+  .leadership-role {
+    font-size: 21px;
+  }
+
+  .leadership-text {
+    font-size: 16px;
+    line-height: 1.8;
+
+    text-align: justify;
+    text-justify: inter-word;
+
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+}
+
+
 @media (max-width: 576px) {
+
   .hero-section h1 {
     font-size: 32px;
   }
@@ -81,51 +132,6 @@
     height: 55px;
     font-size: 30px;
   }
-}
-/* =====================================================
-   RESPONSIVE - GERENCIA GENERAL
-===================================================== */
-
-@media (max-width: 991px) {
-
-  .leadership-section {
-    padding: 70px 0;
-  }
-
-  .leadership-wrapper {
-    border-radius: 22px;
-  }
-
-  /*
-  En tablet mostramos igualmente
-  la imagen completa.
-  */
-  .leadership-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .leadership-content {
-    padding: 45px 40px;
-  }
-
-  .leadership-name {
-    font-size: 38px;
-  }
-
-  .leadership-role {
-    font-size: 21px;
-  }
-
-  .leadership-text {
-    font-size: 16px;
-  }
-
-}
-
-
-@media (max-width: 576px) {
 
   .leadership-section {
     padding: 60px 0;
@@ -140,10 +146,6 @@
     border-radius: 18px;
   }
 
-  /*
-  En celular tampoco se recorta.
-  Mantiene 1254x1254 proporcional.
-  */
   .leadership-image img {
     width: 100%;
     height: auto;
@@ -174,6 +176,13 @@
   .leadership-text {
     font-size: 15px;
     line-height: 1.8;
+
+    text-align: justify;
+    text-justify: inter-word;
+
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
   }
 
   .leadership-quote {
